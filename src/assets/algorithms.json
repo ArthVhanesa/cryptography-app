@@ -1,0 +1,7 @@
+[
+  {
+    "name": "Bcrypt",
+    "description": "Cryptographic hashing function",
+    "path": "/bcrypt"
+  }
+]
