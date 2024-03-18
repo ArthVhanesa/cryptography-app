@@ -7,9 +7,9 @@ function Home() {
     <div className="flex flex-wrap justify-center">
       {data.map((item, index) => (
         <Link key={index} to={item.path}>
-          <div className="m-4 p-4 border rounded shadow w-60 h-[105px]">
+          <div className="m-4 p-4 border rounded shadow w-60 h-auto">
             <h2 className="font-bold">{item.name}</h2>
-            <p className="break-normal">{item.description}</p>
+            <p className="line-clamp-2 text-sm">{item.description}</p>
           </div>
         </Link>
       ))}

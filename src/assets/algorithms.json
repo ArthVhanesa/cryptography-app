@@ -1,7 +1,7 @@
 [
   {
     "name": "Bcrypt",
-    "description": "Cryptographic hashing function",
+    "description": "An adaptive hash function based on the Blowfish cipher, designed for securely storing passwords.",
     "path": "/bcrypt"
   }
 ]

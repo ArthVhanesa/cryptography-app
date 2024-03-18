@@ -11,7 +11,7 @@ function Bcrypt() {
   };
   return (
     <>
-      <PageHeader title="Bcrypt" description="" />
+      <PageHeader name="Bcrypt" />
       <div className="flex flex-col justify-center items-center my-4">
         <div className="w-full max-w-xs">
           <div role="tablist" className="tabs tabs-boxed">
