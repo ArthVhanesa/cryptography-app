@@ -1,6 +1,6 @@
 import { useState } from "react";
 import bcrypt from "@/utils/Bcrypt";
-import { Toaster, toast } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { FaRegCopy } from "react-icons/fa";
 
 function BcryptHash() {
@@ -18,9 +18,9 @@ function BcryptHash() {
     });
   };
 
-  const handleEncrypt = async () => {
+  const handleHash = async () => {
     try {
-      const hash = await bcrypt.encrypt(
+      const hash = await bcrypt.hash(
         formData.password,
         parseInt(formData.salt, 10)
       );
@@ -45,9 +45,7 @@ function BcryptHash() {
 
   return (
     <>
-      <div>
-        <Toaster />
-      </div>
+      <div>{/* <Toaster /> */}</div>
       <div className="w-full max-w-xs mt-2">
         <div className="label">
           <span className="label-text">Enter password</span>
@@ -77,7 +75,7 @@ function BcryptHash() {
 
       <button
         className="btn btn-primary  w-full max-w-xs m-2"
-        onClick={handleEncrypt}
+        onClick={handleHash}
       >
         Generate hash
       </button>

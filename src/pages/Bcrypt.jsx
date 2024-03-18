@@ -1,20 +1,16 @@
-import { React, useState } from "react";
-import { Toaster, toast } from "react-hot-toast";
+import React, { useState } from "react";
 import PageHeader from "@/components/PageHeader";
 import BcryptHash from "@/components/Bcrypt/BcryptHash";
-import BcryptMatch from "@/components/Bcrypt/BcryptMatch";
+import BcryptCompare from "@/components/Bcrypt/BcryptCompare";
 
 function Bcrypt() {
-  const [activeTab, setActiveTab] = useState("Encrypt");
+  const [activeTab, setActiveTab] = useState("Hash");
 
   const handleTabClick = async (tabName) => {
     setActiveTab(tabName);
   };
   return (
     <>
-      <div>
-        <Toaster />
-      </div>
       <PageHeader title="Bcrypt" description="" />
       <div className="flex flex-col justify-center items-center my-4">
         <div className="w-full max-w-xs">
@@ -22,22 +18,22 @@ function Bcrypt() {
             <a
               role="tab"
               className={`tab ${
-                activeTab === "Encrypt" ? "tab-active bg-black" : ""
+                activeTab === "Hash" ? "tab-active bg-black" : ""
               }`}
-              onClick={() => handleTabClick("Encrypt")}
+              onClick={() => handleTabClick("Hash")}
             >
-              Encrypt
+              Hash
             </a>
             <a
               role="tab"
-              className={`tab ${activeTab === "Decrypt" ? "tab-active" : ""}`}
-              onClick={() => handleTabClick("Decrypt")}
+              className={`tab ${activeTab === "Compare" ? "tab-active" : ""}`}
+              onClick={() => handleTabClick("Compare")}
             >
-              Decrypt
+              Compare
             </a>
           </div>
         </div>
-        {activeTab === "Encrypt" ? <BcryptHash /> : <BcryptMatch />}
+        {activeTab === "Hash" ? <BcryptHash /> : <BcryptCompare />}
       </div>
     </>
   );

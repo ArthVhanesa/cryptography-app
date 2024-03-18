@@ -1,8 +1,7 @@
 import { useState } from "react";
 import bcrypt from "@/utils/Bcrypt";
-import { Toaster, toast } from "react-hot-toast";
 
-function BcryptMatch() {
+function BcryptCompare() {
   const [formData, setFormData] = useState({
     password: "",
     hash: "",
@@ -19,7 +18,7 @@ function BcryptMatch() {
 
   const handleMatch = async () => {
     try {
-      const match = await bcrypt.decrypt(formData.password, formData.hash);
+      const match = await bcrypt.match(formData.password, formData.hash);
       setIsMatched(match);
       console.log("Matched:", match);
     } catch (error) {
@@ -30,9 +29,6 @@ function BcryptMatch() {
 
   return (
     <>
-      <div>
-        <Toaster />
-      </div>
       <div className="w-full max-w-xs mt-2">
         <div className="label">
           <span className="label-text">Enter password</span>
@@ -64,7 +60,7 @@ function BcryptMatch() {
         className="btn btn-primary w-full max-w-xs m-2"
         onClick={handleMatch}
       >
-        Match
+        Compare
       </button>
 
       {isMatched !== null && (
@@ -80,4 +76,4 @@ function BcryptMatch() {
   );
 }
 
-export default BcryptMatch;
+export default BcryptCompare;

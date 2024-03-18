@@ -2,8 +2,8 @@
 
 import bcrypt from "bcryptjs";
 
-// Encryption function
-async function encrypt(data, saltRounds = 10) {
+// Hashing function
+async function hash(data, saltRounds = 10) {
   try {
     const hash = await bcrypt.hash(data, saltRounds);
     return hash;
@@ -12,8 +12,8 @@ async function encrypt(data, saltRounds = 10) {
   }
 }
 
-// Decryption function
-async function decrypt(data, hashedData) {
+// Comparing function
+async function match(data, hashedData) {
   try {
     const match = await bcrypt.compare(data, hashedData);
     return match;
@@ -22,4 +22,4 @@ async function decrypt(data, hashedData) {
   }
 }
 
-export default { encrypt, decrypt };
+export default { hash, match };
