@@ -6,7 +6,7 @@ function BcryptCompare() {
     password: "",
     hash: "",
   });
-  const [isMatched, setIsMatched] = useState(null);
+  const [isCompared, setIsCompared] = useState(null);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -16,14 +16,12 @@ function BcryptCompare() {
     });
   };
 
-  const handleMatch = async () => {
+  const handleCompare = async () => {
     try {
-      const match = await bcrypt.match(formData.password, formData.hash);
-      setIsMatched(match);
-      console.log("Matched:", match);
+      const compare = await bcrypt.compare(formData.password, formData.hash);
+      setIsCompared(compare);
     } catch (error) {
-      console.error("Error occurred while matching:", error);
-      setIsMatched("Error occurred while matching");
+      setIsCompared("Error occurred while comparing.");
     }
   };
 
@@ -58,18 +56,18 @@ function BcryptCompare() {
 
       <button
         className="btn btn-primary w-full max-w-xs m-2"
-        onClick={handleMatch}
+        onClick={handleCompare}
       >
         Compare
       </button>
 
-      {isMatched !== null && (
+      {isCompared !== null && (
         <div
           className={`alert w-full max-w-xs ${
-            isMatched === true ? "alert-success" : "alert-error"
+            isCompared === true ? "alert-success" : "alert-error"
           }`}
         >
-          {isMatched === true ? "Hash matched." : "Hash does not match!"}
+          {isCompared === true ? "Hash matched." : "Hash does not match!"}
         </div>
       )}
     </>

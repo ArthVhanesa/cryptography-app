@@ -13,13 +13,13 @@ async function hash(data, saltRounds = 10) {
 }
 
 // Comparing function
-async function match(data, hashedData) {
+async function compare(data, hashedData) {
   try {
-    const match = await bcrypt.compare(data, hashedData);
-    return match;
+    const compare = await bcrypt.compare(data, hashedData);
+    return compare;
   } catch (error) {
     throw error;
   }
 }
 
-export default { hash, match };
+export default { hash, compare };
