@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import PageHeader from "@/components/PageHeader";
-import BcryptHash from "@/components/Bcrypt/BcryptHash";
-import BcryptCompare from "@/components/Bcrypt/BcryptCompare";
+import ScryptHash from "@/components/Scrypt/ScryptHash";
+import ScryptCompare from "@/components/Scrypt/ScryptCompare";
 
-function Bcrypt() {
+function ScryptPage() {
   const [activeTab, setActiveTab] = useState("Hash");
 
   const handleTabClick = async (tabName) => {
@@ -11,7 +11,7 @@ function Bcrypt() {
   };
   return (
     <>
-      <PageHeader name="Bcrypt" />
+      <PageHeader name="Scrypt" />
       <div className="flex flex-col justify-center items-center my-4">
         <div className="w-full max-w-xs">
           <div role="tablist" className="tabs tabs-boxed">
@@ -33,10 +33,10 @@ function Bcrypt() {
             </a>
           </div>
         </div>
-        {activeTab === "Hash" ? <BcryptHash /> : <BcryptCompare />}
+        {activeTab === "Hash" ? <ScryptHash /> : <ScryptCompare />}
       </div>
     </>
   );
 }
 
-export default Bcrypt;
+export default ScryptPage;

@@ -1,5 +1,3 @@
-// bcrypt.js
-
 import bcrypt from "bcryptjs";
 
 // Hashing function

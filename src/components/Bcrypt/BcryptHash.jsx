@@ -35,7 +35,6 @@ function BcryptHash() {
     navigator.clipboard
       .writeText(hashedValue)
       .then(() => {
-        console.log("Text copied to clipboard");
         toast.success("Copied to clipboard!");
       })
       .catch((error) => {

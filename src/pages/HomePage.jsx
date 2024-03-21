@@ -2,7 +2,7 @@ import React from "react";
 import data from "@/assets/algorithms.json";
 import { Link } from "react-router-dom";
 
-function Home() {
+function HomePage() {
   return (
     <div className="flex flex-wrap justify-center">
       {data.map((item, index) => (
@@ -17,4 +17,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomePage;

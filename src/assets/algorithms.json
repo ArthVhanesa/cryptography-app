@@ -3,5 +3,10 @@
     "name": "Bcrypt",
     "description": "An adaptive hash function based on the Blowfish cipher, designed for securely storing passwords.",
     "path": "/bcrypt"
+  },
+  {
+    "name": "Scrypt",
+    "description": "An adaptive hash function based on the Blowfish cipher, designed for securely storing passwords.",
+    "path": "/scrypt"
   }
 ]
