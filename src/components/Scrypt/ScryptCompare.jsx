@@ -51,7 +51,7 @@ function ScryptCompare() {
   };
 
   return (
-    <div className="w-full m-4">
+    <>
       <div className="w-full max-w-sm mt-2">
         <div className="label">
           <span className="label-text">Hash</span>
@@ -165,7 +165,7 @@ function ScryptCompare() {
           {isCompared === true ? "Hash matched." : "Hash does not match!"}
         </div>
       )}
-    </div>
+    </>
   );
 }
 

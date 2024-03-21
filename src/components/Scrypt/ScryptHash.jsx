@@ -61,7 +61,8 @@ function ScryptHash() {
   };
 
   return (
-    <div className="w-full m-4">
+    <>
+      <div>{/* <Toaster /> */}</div>
       <div className="w-full max-w-sm mt-2">
         <div className="label">
           <span className="label-text">Enter password</span>
@@ -166,7 +167,7 @@ function ScryptHash() {
           </button>
         </div>
       )}
-    </div>
+    </>
   );
 }
 
