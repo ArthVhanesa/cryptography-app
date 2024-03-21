@@ -33,7 +33,9 @@ function ScryptPage() {
             </a>
           </div>
         </div>
-        {activeTab === "Hash" ? <ScryptHash /> : <ScryptCompare />}
+        <div className="w-full flex flex-col justify-center items-center px-4">
+          {activeTab === "Hash" ? <ScryptHash /> : <ScryptCompare />}
+        </div>
       </div>
     </>
   );
