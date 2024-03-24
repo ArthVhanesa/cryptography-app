@@ -92,7 +92,7 @@ function ScryptCompare() {
         />
       </div>
       <div className="w-full max-w-sm flex flex-row items-center justify-between">
-        <div className="w-full max-w-[11rem] mb-2">
+        <div className="w-full max-w-[11rem] mb-2 mr-2">
           <div className="label">
             <span className="label-text">Key length</span>
           </div>
@@ -105,7 +105,7 @@ function ScryptCompare() {
             onChange={handleChange}
           />
         </div>
-        <div className="w-full max-w-[11rem] mb-2">
+        <div className="w-full max-w-[11rem] mb-2 ml-2">
           <div className="label">
             <span className="label-text">Cost</span>
           </div>
@@ -121,7 +121,7 @@ function ScryptCompare() {
       </div>
 
       <div className="w-full max-w-sm flex flex-row items-center justify-between">
-        <div className="w-full max-w-[11rem] mb-2">
+        <div className="w-full max-w-[11rem] mb-2 mr-2">
           <div className="label">
             <span className="label-text">Block size</span>
           </div>
@@ -134,7 +134,7 @@ function ScryptCompare() {
             onChange={handleChange}
           />
         </div>
-        <div className="w-full max-w-[11rem] mb-2">
+        <div className="w-full max-w-[11rem] mb-2 ml-2">
           <div className="label">
             <span className="label-text">Parallelization</span>
           </div>
